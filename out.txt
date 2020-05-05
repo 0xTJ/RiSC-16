@@ -1,0 +1,1857 @@
+
+ /----------------------------------------------------------------------------\
+ |                                                                            |
+ |  yosys -- Yosys Open SYnthesis Suite                                       |
+ |                                                                            |
+ |  Copyright (C) 2012 - 2019  Clifford Wolf <clifford@clifford.at>           |
+ |                                                                            |
+ |  Permission to use, copy, modify, and/or distribute this software for any  |
+ |  purpose with or without fee is hereby granted, provided that the above    |
+ |  copyright notice and this permission notice appear in all copies.         |
+ |                                                                            |
+ |  THE SOFTWARE IS PROVIDED "AS IS" AND THE AUTHOR DISCLAIMS ALL WARRANTIES  |
+ |  WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES OF          |
+ |  MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE FOR   |
+ |  ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES    |
+ |  WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN AN     |
+ |  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF   |
+ |  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.            |
+ |                                                                            |
+ \----------------------------------------------------------------------------/
+
+ Yosys 0.9+932 (git sha1 UNKNOWN, x86_64-w64-mingw32-g++ 7.3-posix -O3 -DNDEBUG)
+
+
+-- Parsing `alu.v' using frontend `verilog' --
+
+1. Executing Verilog-2005 frontend: alu.v
+Parsing Verilog input from `alu.v' to AST representation.
+Generating RTLIL representation for module `\alu'.
+Successfully finished Verilog frontend.
+
+-- Parsing `control.v' using frontend `verilog' --
+
+2. Executing Verilog-2005 frontend: control.v
+Parsing Verilog input from `control.v' to AST representation.
+Generating RTLIL representation for module `\control'.
+Successfully finished Verilog frontend.
+
+-- Parsing `cpu.v' using frontend `verilog' --
+
+3. Executing Verilog-2005 frontend: cpu.v
+Parsing Verilog input from `cpu.v' to AST representation.
+Generating RTLIL representation for module `\cpu'.
+Successfully finished Verilog frontend.
+
+-- Parsing `op_decode.v' using frontend `verilog' --
+
+4. Executing Verilog-2005 frontend: op_decode.v
+Parsing Verilog input from `op_decode.v' to AST representation.
+Generating RTLIL representation for module `\op_decode'.
+Successfully finished Verilog frontend.
+
+-- Parsing `registers.v' using frontend `verilog' --
+
+5. Executing Verilog-2005 frontend: registers.v
+Parsing Verilog input from `registers.v' to AST representation.
+Generating RTLIL representation for module `\registers'.
+Successfully finished Verilog frontend.
+
+-- Parsing `top.v' using frontend `verilog' --
+
+6. Executing Verilog-2005 frontend: top.v
+Parsing Verilog input from `top.v' to AST representation.
+Generating RTLIL representation for module `\top'.
+Loading rom.
+Note: Assuming pure combinatorial block at top.v:122 in
+compliance with IEC 62142(E):2005 / IEEE Std. 1364.1(E):2002. Recommending
+use of @* instead of @(...) for better match of synthesis and simulation.
+Successfully finished Verilog frontend.
+
+-- Running command `dump' --
+
+autoidx 80
+
+attribute \cells_not_processed 1
+attribute \src "top.v:1"
+module \top
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:84$41_DATA[15:0]$79
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:84$41_ADDR[31:0]$78
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:83$40_DATA[15:0]$77
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:83$40_ADDR[31:0]$76
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:82$39_DATA[15:0]$75
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:82$39_ADDR[31:0]$74
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:81$38_DATA[15:0]$73
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:81$38_ADDR[31:0]$72
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:80$37_DATA[15:0]$71
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:80$37_ADDR[31:0]$70
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:79$36_DATA[15:0]$69
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:79$36_ADDR[31:0]$68
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:78$35_DATA[15:0]$67
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:78$35_ADDR[31:0]$66
+
+  attribute \src "top.v:72"
+  wire width 16 $0$memwr$\instr_mem$top.v:77$34_DATA[15:0]$65
+
+  attribute \src "top.v:72"
+  wire width 32 $0$memwr$\instr_mem$top.v:77$34_ADDR[31:0]$64
+
+  attribute \src "top.v:12"
+  wire $0\reset[0:0]
+
+  attribute \src "top.v:10"
+  wire width 16 $1\counter[15:0]
+
+  attribute \src "top.v:124"
+  wire $logic_not$top.v:124$52_Y
+
+  attribute \src "top.v:122"
+  wire $0\_led_blue[0:0]
+
+  attribute \src "top.v:122"
+  wire $0\_led_green[0:0]
+
+  attribute \src "top.v:117"
+  wire $0\_led_red[0:0]
+
+  attribute \src "top.v:112"
+  wire width 16 $memrd$\data_mem$top.v:112$49_DATA
+
+  attribute \src "top.v:110"
+  wire width 16 $1\data_out[15:0]
+
+  attribute \src "top.v:111"
+  wire $logic_not$top.v:111$48_Y
+
+  attribute \src "top.v:110"
+  wire width 16 $0\data_out[15:0]
+
+  attribute \src "top.v:98"
+  wire width 16 $memrd$\instr_mem$top.v:98$45_DATA
+
+  attribute \src "top.v:97"
+  wire width 16 $0\instr[15:0]
+
+  attribute \src "top.v:35"
+  wire width 32 $add$top.v:35$43_Y
+
+  attribute \src "top.v:34"
+  wire width 16 $0\counter[15:0]
+
+  attribute \src "top.v:84"
+  wire width 16 $memwr$\instr_mem$top.v:84$41_DATA
+
+  attribute \src "top.v:84"
+  wire width 32 $memwr$\instr_mem$top.v:84$41_ADDR
+
+  attribute \src "top.v:83"
+  wire width 16 $memwr$\instr_mem$top.v:83$40_DATA
+
+  attribute \src "top.v:83"
+  wire width 32 $memwr$\instr_mem$top.v:83$40_ADDR
+
+  attribute \src "top.v:82"
+  wire width 16 $memwr$\instr_mem$top.v:82$39_DATA
+
+  attribute \src "top.v:82"
+  wire width 32 $memwr$\instr_mem$top.v:82$39_ADDR
+
+  attribute \src "top.v:81"
+  wire width 16 $memwr$\instr_mem$top.v:81$38_DATA
+
+  attribute \src "top.v:81"
+  wire width 32 $memwr$\instr_mem$top.v:81$38_ADDR
+
+  attribute \src "top.v:80"
+  wire width 16 $memwr$\instr_mem$top.v:80$37_DATA
+
+  attribute \src "top.v:80"
+  wire width 32 $memwr$\instr_mem$top.v:80$37_ADDR
+
+  attribute \src "top.v:79"
+  wire width 16 $memwr$\instr_mem$top.v:79$36_DATA
+
+  attribute \src "top.v:79"
+  wire width 32 $memwr$\instr_mem$top.v:79$36_ADDR
+
+  attribute \src "top.v:78"
+  wire width 16 $memwr$\instr_mem$top.v:78$35_DATA
+
+  attribute \src "top.v:78"
+  wire width 32 $memwr$\instr_mem$top.v:78$35_ADDR
+
+  attribute \src "top.v:77"
+  wire width 16 $memwr$\instr_mem$top.v:77$34_DATA
+
+  attribute \src "top.v:77"
+  wire width 32 $memwr$\instr_mem$top.v:77$34_ADDR
+
+  attribute \src "top.v:23"
+  wire \_led_blue
+
+  attribute \src "top.v:22"
+  wire \_led_green
+
+  attribute \src "top.v:21"
+  wire \_led_red
+
+  attribute \src "top.v:19"
+  wire \halt
+
+  attribute \src "top.v:18"
+  wire width 16 \data_out
+
+  attribute \src "top.v:17"
+  wire width 16 \data_in
+
+  attribute \src "top.v:16"
+  wire width 16 \data_addr
+
+  attribute \src "top.v:15"
+  wire \we_dmem
+
+  attribute \src "top.v:14"
+  wire width 16 \instr_addr
+
+  attribute \src "top.v:13"
+  wire width 16 \instr
+
+  attribute \src "top.v:12"
+  wire \reset
+
+  attribute \src "top.v:10"
+  wire width 16 \counter
+
+  attribute \src "top.v:9"
+  wire \clk_raw
+
+  attribute \src "top.v:8"
+  wire \clk
+
+  attribute \src "top.v:5"
+  wire output 3 \led_blue
+
+  attribute \src "top.v:4"
+  wire output 2 \led_green
+
+  attribute \src "top.v:3"
+  wire output 1 \led_red
+
+  attribute \src "top.v:52"
+  memory width 16 size 32 \instr_mem
+
+  attribute \src "top.v:51"
+  memory width 16 size 32 \data_mem
+
+  attribute \src "top.v:84"
+  cell $meminit $meminit$\instr_mem$top.v:84$60
+    parameter \PRIORITY 60
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:84$41_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:84$41_ADDR
+  end
+
+  attribute \src "top.v:83"
+  cell $meminit $meminit$\instr_mem$top.v:83$59
+    parameter \PRIORITY 59
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:83$40_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:83$40_ADDR
+  end
+
+  attribute \src "top.v:82"
+  cell $meminit $meminit$\instr_mem$top.v:82$58
+    parameter \PRIORITY 58
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:82$39_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:82$39_ADDR
+  end
+
+  attribute \src "top.v:81"
+  cell $meminit $meminit$\instr_mem$top.v:81$57
+    parameter \PRIORITY 57
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:81$38_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:81$38_ADDR
+  end
+
+  attribute \src "top.v:80"
+  cell $meminit $meminit$\instr_mem$top.v:80$56
+    parameter \PRIORITY 56
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:80$37_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:80$37_ADDR
+  end
+
+  attribute \src "top.v:79"
+  cell $meminit $meminit$\instr_mem$top.v:79$55
+    parameter \PRIORITY 55
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:79$36_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:79$36_ADDR
+  end
+
+  attribute \src "top.v:78"
+  cell $meminit $meminit$\instr_mem$top.v:78$54
+    parameter \PRIORITY 54
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:78$35_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:78$35_ADDR
+  end
+
+  attribute \src "top.v:77"
+  cell $meminit $meminit$\instr_mem$top.v:77$53
+    parameter \PRIORITY 53
+    parameter \WIDTH 16
+    parameter \ABITS 32
+    parameter \MEMID "\\instr_mem"
+    parameter \WORDS 1
+    connect \DATA $memwr$\instr_mem$top.v:77$34_DATA
+    connect \ADDR $memwr$\instr_mem$top.v:77$34_ADDR
+  end
+
+  attribute \src "top.v:124"
+  cell $logic_not $logic_not$top.v:124$52
+    parameter \Y_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \A_SIGNED 0
+    connect \Y $logic_not$top.v:124$52_Y
+    connect \A \clk
+  end
+
+  attribute \src "top.v:112"
+  cell $memrd $memrd$\data_mem$top.v:112$49
+    parameter \TRANSPARENT 0
+    parameter \CLK_POLARITY 0
+    parameter \CLK_ENABLE 0
+    parameter \WIDTH 16
+    parameter \ABITS 16
+    parameter \MEMID "\\data_mem"
+    connect \DATA $memrd$\data_mem$top.v:112$49_DATA
+    connect \ADDR \data_addr
+    connect \EN 1'x
+    connect \CLK 1'x
+  end
+
+  attribute \src "top.v:111"
+  cell $logic_not $logic_not$top.v:111$48
+    parameter \Y_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \A_SIGNED 0
+    connect \Y $logic_not$top.v:111$48_Y
+    connect \A \we_dmem
+  end
+
+  attribute \src "top.v:98"
+  cell $memrd $memrd$\instr_mem$top.v:98$45
+    parameter \TRANSPARENT 0
+    parameter \CLK_POLARITY 0
+    parameter \CLK_ENABLE 0
+    parameter \WIDTH 16
+    parameter \ABITS 16
+    parameter \MEMID "\\instr_mem"
+    connect \DATA $memrd$\instr_mem$top.v:98$45_DATA
+    connect \ADDR \instr_addr
+    connect \EN 1'x
+    connect \CLK 1'x
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "top.v:39"
+  cell \cpu \cpu
+    connect \halt \halt
+    connect \data_out \data_out
+    connect \data_in \data_in
+    connect \data_addr \data_addr
+    connect \we_dmem \we_dmem
+    connect \instr_addr \instr_addr
+    connect \instr \instr
+    connect \reset \reset
+    connect \clk \clk
+  end
+
+  attribute \src "top.v:35"
+  cell $add $add$top.v:35$43
+    parameter \Y_WIDTH 32
+    parameter \B_WIDTH 32
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $add$top.v:35$43_Y
+    connect \B 1
+    connect \A \counter
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "top.v:26"
+  cell \SB_LFOSC \OSCInst0
+    connect \CLKLF \clk_raw
+    connect \CLKLFPU 1'1
+    connect \CLKLFEN 1'1
+  end
+
+  attribute \src "top.v:72"
+  process $proc$top.v:72$63
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign $0$memwr$\instr_mem$top.v:77$34_ADDR[31:0]$64 0
+    assign $0$memwr$\instr_mem$top.v:77$34_DATA[15:0]$65 16'0110010000000000
+    assign $0$memwr$\instr_mem$top.v:78$35_ADDR[31:0]$66 1
+    assign $0$memwr$\instr_mem$top.v:78$35_DATA[15:0]$67 16'0010010010000000
+    assign $0$memwr$\instr_mem$top.v:79$36_ADDR[31:0]$68 2
+    assign $0$memwr$\instr_mem$top.v:79$36_DATA[15:0]$69 16'0110100000000000
+    assign $0$memwr$\instr_mem$top.v:80$37_ADDR[31:0]$70 3
+    assign $0$memwr$\instr_mem$top.v:80$37_DATA[15:0]$71 16'0010100100000001
+    assign $0$memwr$\instr_mem$top.v:81$38_ADDR[31:0]$72 4
+    assign $0$memwr$\instr_mem$top.v:81$38_DATA[15:0]$73 16'0110110000000000
+    assign $0$memwr$\instr_mem$top.v:82$39_ADDR[31:0]$74 5
+    assign $0$memwr$\instr_mem$top.v:82$39_DATA[15:0]$75 16'0010110110000000
+    assign $0$memwr$\instr_mem$top.v:83$40_ADDR[31:0]$76 6
+    assign $0$memwr$\instr_mem$top.v:83$40_DATA[15:0]$77 16'0111100000000000
+    assign $0$memwr$\instr_mem$top.v:84$41_ADDR[31:0]$78 7
+    assign $0$memwr$\instr_mem$top.v:84$41_DATA[15:0]$79 16'0011101100001101
+    sync always
+      update $memwr$\instr_mem$top.v:77$34_ADDR $0$memwr$\instr_mem$top.v:77$34_ADDR[31:0]$64
+      update $memwr$\instr_mem$top.v:77$34_DATA $0$memwr$\instr_mem$top.v:77$34_DATA[15:0]$65
+      update $memwr$\instr_mem$top.v:78$35_ADDR $0$memwr$\instr_mem$top.v:78$35_ADDR[31:0]$66
+      update $memwr$\instr_mem$top.v:78$35_DATA $0$memwr$\instr_mem$top.v:78$35_DATA[15:0]$67
+      update $memwr$\instr_mem$top.v:79$36_ADDR $0$memwr$\instr_mem$top.v:79$36_ADDR[31:0]$68
+      update $memwr$\instr_mem$top.v:79$36_DATA $0$memwr$\instr_mem$top.v:79$36_DATA[15:0]$69
+      update $memwr$\instr_mem$top.v:80$37_ADDR $0$memwr$\instr_mem$top.v:80$37_ADDR[31:0]$70
+      update $memwr$\instr_mem$top.v:80$37_DATA $0$memwr$\instr_mem$top.v:80$37_DATA[15:0]$71
+      update $memwr$\instr_mem$top.v:81$38_ADDR $0$memwr$\instr_mem$top.v:81$38_ADDR[31:0]$72
+      update $memwr$\instr_mem$top.v:81$38_DATA $0$memwr$\instr_mem$top.v:81$38_DATA[15:0]$73
+      update $memwr$\instr_mem$top.v:82$39_ADDR $0$memwr$\instr_mem$top.v:82$39_ADDR[31:0]$74
+      update $memwr$\instr_mem$top.v:82$39_DATA $0$memwr$\instr_mem$top.v:82$39_DATA[15:0]$75
+      update $memwr$\instr_mem$top.v:83$40_ADDR $0$memwr$\instr_mem$top.v:83$40_ADDR[31:0]$76
+      update $memwr$\instr_mem$top.v:83$40_DATA $0$memwr$\instr_mem$top.v:83$40_DATA[15:0]$77
+      update $memwr$\instr_mem$top.v:84$41_ADDR $0$memwr$\instr_mem$top.v:84$41_ADDR[31:0]$78
+      update $memwr$\instr_mem$top.v:84$41_DATA $0$memwr$\instr_mem$top.v:84$41_DATA[15:0]$79
+    sync init
+  end
+
+  attribute \src "top.v:12"
+  process $proc$top.v:12$62
+    assign { } { }
+    assign $0\reset[0:0] 1'0
+    sync always
+      update \reset $0\reset[0:0]
+    sync init
+  end
+
+  attribute \src "top.v:10"
+  process $proc$top.v:10$61
+    assign { } { }
+    assign $1\counter[15:0] 16'0000000000000000
+    sync always
+    sync init
+      update \counter $1\counter[15:0]
+  end
+
+  attribute \src "top.v:122"
+  process $proc$top.v:122$51
+    assign { } { }
+    assign { } { }
+    assign $0\_led_green[0:0] \clk
+    assign $0\_led_blue[0:0] $logic_not$top.v:124$52_Y
+    sync always
+      update \_led_green $0\_led_green[0:0]
+      update \_led_blue $0\_led_blue[0:0]
+  end
+
+  attribute \src "top.v:117"
+  process $proc$top.v:117$50
+    assign { } { }
+    assign $0\_led_red[0:0] \instr [15]
+    sync always
+      update \_led_red $0\_led_red[0:0]
+  end
+
+  attribute \src "top.v:110"
+  process $proc$top.v:110$47
+    assign { } { }
+    assign $0\data_out[15:0] $1\data_out[15:0]
+    attribute \src "top.v:111"
+    switch $logic_not$top.v:111$48_Y
+      attribute \src "top.v:111"
+      case 1'1
+        assign { } { }
+        assign $1\data_out[15:0] $memrd$\data_mem$top.v:112$49_DATA
+      case 
+        assign $1\data_out[15:0] \data_out
+    end
+    sync posedge \clk_raw
+      update \data_out $0\data_out[15:0]
+  end
+
+  attribute \src "top.v:101"
+  process $proc$top.v:101$46
+    sync posedge \clk
+  end
+
+  attribute \src "top.v:97"
+  process $proc$top.v:97$44
+    assign { } { }
+    assign $0\instr[15:0] $memrd$\instr_mem$top.v:98$45_DATA
+    sync negedge \clk
+      update \instr $0\instr[15:0]
+  end
+
+  attribute \src "top.v:34"
+  process $proc$top.v:34$42
+    assign { } { }
+    assign $0\counter[15:0] $add$top.v:35$43_Y [15:0]
+    sync posedge \clk_raw
+      update \counter $0\counter[15:0]
+  end
+
+  connect \clk \counter [12]
+  connect \led_red \_led_red
+  connect \led_green \_led_green
+  connect \led_blue \_led_blue
+end
+
+attribute \cells_not_processed 1
+attribute \src "registers.v:1"
+module \registers
+
+  attribute \src "registers.v:32"
+  wire width 16 $memrd$\regs$registers.v:32$32_DATA
+
+  attribute \src "registers.v:25"
+  wire width 16 $1\_src2_val[15:0]
+
+  attribute \src "registers.v:28"
+  wire width 16 $memrd$\regs$registers.v:28$31_DATA
+
+  attribute \src "registers.v:25"
+  wire width 16 $1\_src1_val[15:0]
+
+  attribute \src "registers.v:25"
+  wire width 16 $0\_src2_val[15:0]
+
+  attribute \src "registers.v:25"
+  wire width 16 $0\_src1_val[15:0]
+
+  attribute \src "registers.v:16"
+  wire width 16 $0$memwr$\regs$registers.v:20$25_EN[15:0]$29
+
+  attribute \src "registers.v:16"
+  wire width 16 $0$memwr$\regs$registers.v:20$25_DATA[15:0]$28
+
+  attribute \src "registers.v:16"
+  wire width 3 $0$memwr$\regs$registers.v:20$25_ADDR[2:0]$27
+
+  attribute \src "registers.v:20"
+  wire width 16 $memwr$\regs$registers.v:20$25_EN
+
+  attribute \src "registers.v:20"
+  wire width 16 $memwr$\regs$registers.v:20$25_DATA
+
+  attribute \src "registers.v:20"
+  wire width 3 $memwr$\regs$registers.v:20$25_ADDR
+
+  attribute \src "registers.v:14"
+  wire width 16 \_src2_val
+
+  attribute \src "registers.v:13"
+  wire width 16 \_src1_val
+
+  attribute \src "registers.v:9"
+  wire width 16 output 8 \src2_val
+
+  attribute \src "registers.v:8"
+  wire width 16 output 7 \src1_val
+
+  attribute \src "registers.v:7"
+  wire width 16 input 6 \tgt_val
+
+  attribute \src "registers.v:6"
+  wire width 3 input 5 \src2
+
+  attribute \src "registers.v:5"
+  wire width 3 input 4 \src1
+
+  attribute \src "registers.v:4"
+  wire width 3 input 3 \tgt
+
+  attribute \src "registers.v:3"
+  wire input 2 \we_rf
+
+  attribute \src "registers.v:2"
+  wire input 1 \clk
+
+  attribute \src "registers.v:12"
+  memory width 16 size 8 \regs
+
+  attribute \src "registers.v:20"
+  cell $memwr $memwr$\regs$registers.v:20$33
+    parameter \PRIORITY 33
+    parameter \CLK_POLARITY 0
+    parameter \CLK_ENABLE 0
+    parameter \WIDTH 16
+    parameter \ABITS 3
+    parameter \MEMID "\\regs"
+    connect \EN $memwr$\regs$registers.v:20$25_EN
+    connect \CLK 1'x
+    connect \DATA $memwr$\regs$registers.v:20$25_DATA
+    connect \ADDR $memwr$\regs$registers.v:20$25_ADDR
+  end
+
+  attribute \src "registers.v:32"
+  cell $memrd $memrd$\regs$registers.v:32$32
+    parameter \TRANSPARENT 0
+    parameter \CLK_POLARITY 0
+    parameter \CLK_ENABLE 0
+    parameter \WIDTH 16
+    parameter \ABITS 3
+    parameter \MEMID "\\regs"
+    connect \DATA $memrd$\regs$registers.v:32$32_DATA
+    connect \ADDR \src2
+    connect \EN 1'x
+    connect \CLK 1'x
+  end
+
+  attribute \src "registers.v:28"
+  cell $memrd $memrd$\regs$registers.v:28$31
+    parameter \TRANSPARENT 0
+    parameter \CLK_POLARITY 0
+    parameter \CLK_ENABLE 0
+    parameter \WIDTH 16
+    parameter \ABITS 3
+    parameter \MEMID "\\regs"
+    connect \DATA $memrd$\regs$registers.v:28$31_DATA
+    connect \ADDR \src1
+    connect \EN 1'x
+    connect \CLK 1'x
+  end
+
+  attribute \src "registers.v:25"
+  process $proc$registers.v:25$30
+    assign { } { }
+    assign { } { }
+    assign $0\_src1_val[15:0] $1\_src1_val[15:0]
+    assign $0\_src2_val[15:0] $1\_src2_val[15:0]
+    attribute \src "registers.v:26"
+    switch \src1
+      attribute \src "registers.v:27"
+      case 3'000
+        assign { } { }
+        assign $1\_src1_val[15:0] 16'0000000000000000
+      attribute \src "registers.v:28"
+      case 
+        assign { } { }
+        assign $1\_src1_val[15:0] $memrd$\regs$registers.v:28$31_DATA
+    end
+    attribute \src "registers.v:30"
+    switch \src2
+      attribute \src "registers.v:31"
+      case 3'000
+        assign { } { }
+        assign $1\_src2_val[15:0] 16'0000000000000000
+      attribute \src "registers.v:32"
+      case 
+        assign { } { }
+        assign $1\_src2_val[15:0] $memrd$\regs$registers.v:32$32_DATA
+    end
+    sync posedge \clk
+      update \_src1_val $0\_src1_val[15:0]
+      update \_src2_val $0\_src2_val[15:0]
+  end
+
+  attribute \src "registers.v:16"
+  process $proc$registers.v:16$26
+    assign { } { }
+    assign { } { }
+    assign { } { }
+    assign $0$memwr$\regs$registers.v:20$25_ADDR[2:0]$27 3'xxx
+    assign $0$memwr$\regs$registers.v:20$25_DATA[15:0]$28 16'xxxxxxxxxxxxxxxx
+    assign $0$memwr$\regs$registers.v:20$25_EN[15:0]$29 16'0000000000000000
+    attribute \src "registers.v:17"
+    switch \we_rf
+      attribute \src "registers.v:17"
+      case 1'1
+        attribute \src "registers.v:18"
+        switch \tgt
+          attribute \src "registers.v:19"
+          case 3'000
+          attribute \src "registers.v:20"
+          case 
+            assign $0$memwr$\regs$registers.v:20$25_ADDR[2:0]$27 \tgt
+            assign $0$memwr$\regs$registers.v:20$25_DATA[15:0]$28 \tgt_val
+            assign $0$memwr$\regs$registers.v:20$25_EN[15:0]$29 16'1111111111111111
+        end
+      case 
+    end
+    sync posedge \clk
+      update $memwr$\regs$registers.v:20$25_ADDR $0$memwr$\regs$registers.v:20$25_ADDR[2:0]$27
+      update $memwr$\regs$registers.v:20$25_DATA $0$memwr$\regs$registers.v:20$25_DATA[15:0]$28
+      update $memwr$\regs$registers.v:20$25_EN $0$memwr$\regs$registers.v:20$25_EN[15:0]$29
+  end
+
+  connect \src1_val \_src1_val
+  connect \src2_val \_src2_val
+end
+
+attribute \cells_not_processed 1
+attribute \src "op_decode.v:1"
+module \op_decode
+
+  attribute \src "op_decode.v:8"
+  wire width 10 output 7 \imm
+
+  attribute \src "op_decode.v:7"
+  wire width 7 output 6 \s_imm
+
+  attribute \src "op_decode.v:6"
+  wire width 3 output 5 \reg_c
+
+  attribute \src "op_decode.v:5"
+  wire width 3 output 4 \reg_b
+
+  attribute \src "op_decode.v:4"
+  wire width 3 output 3 \reg_a
+
+  attribute \src "op_decode.v:3"
+  wire width 3 output 2 \opcode
+
+  attribute \src "op_decode.v:2"
+  wire width 16 input 1 \instr
+
+  connect \opcode \instr [15:13]
+  connect \reg_a \instr [12:10]
+  connect \reg_b \instr [9:7]
+  connect \reg_c \instr [2:0]
+  connect \s_imm \instr [6:0]
+  connect \imm \instr [9:0]
+end
+
+attribute \cells_not_processed 1
+attribute \src "cpu.v:1"
+module \cpu
+
+  attribute \src "cpu.v:38"
+  wire width 16 $3\pc[15:0]
+
+  attribute \src "cpu.v:140"
+  wire $eq$cpu.v:140$23_Y
+
+  attribute \src "cpu.v:139"
+  wire $0\_halt[0:0]
+
+  attribute \src "cpu.v:123"
+  wire width 16 $2\pc[15:0]
+
+  attribute \src "cpu.v:123"
+  wire width 16 $1\pc[15:0]
+
+  attribute \src "cpu.v:124"
+  wire $not$cpu.v:124$21_Y
+
+  attribute \src "cpu.v:123"
+  wire width 16 $0\pc[15:0]
+
+  attribute \src "cpu.v:122"
+  wire width 16 $add$cpu.v:122$19_Y
+
+  attribute \src "cpu.v:121"
+  wire width 16 $add$cpu.v:121$18_Y
+
+  attribute \src "cpu.v:114"
+  wire width 16 $1\alu_in2[15:0]
+
+  attribute \src "cpu.v:114"
+  wire width 16 $0\alu_in2[15:0]
+
+  attribute \src "cpu.v:108"
+  wire width 16 $1\alu_in1[15:0]
+
+  attribute \src "cpu.v:108"
+  wire width 16 $0\alu_in1[15:0]
+
+  attribute \src "cpu.v:96"
+  wire width 3 $1\src2[2:0]
+
+  attribute \src "cpu.v:96"
+  wire width 3 $0\src2[2:0]
+
+  attribute \src "cpu.v:85"
+  wire width 16 $1\tgt_val[15:0]
+
+  attribute \src "cpu.v:85"
+  wire width 16 $0\tgt_val[15:0]
+
+  attribute \src "cpu.v:39"
+  wire width 16 \pc_inc_offset
+
+  attribute \src "cpu.v:39"
+  wire width 16 \pc_inc
+
+  attribute \src "cpu.v:38"
+  wire width 16 \pc
+
+  attribute \src "cpu.v:36"
+  wire \eq
+
+  attribute \src "cpu.v:35"
+  wire width 16 \alu_out
+
+  attribute \src "cpu.v:34"
+  wire width 16 \alu_in2
+
+  attribute \src "cpu.v:34"
+  wire width 16 \alu_in1
+
+  attribute \src "cpu.v:32"
+  wire width 16 \shifted_imm
+
+  attribute \src "cpu.v:31"
+  wire width 16 \sign_ext_s_imm
+
+  attribute \src "cpu.v:29"
+  wire width 10 \imm
+
+  attribute \src "cpu.v:28"
+  wire width 7 \s_imm
+
+  attribute \src "cpu.v:27"
+  wire width 3 \reg_c
+
+  attribute \src "cpu.v:27"
+  wire width 3 \reg_b
+
+  attribute \src "cpu.v:27"
+  wire width 3 \reg_a
+
+  attribute \src "cpu.v:27"
+  wire width 3 \opcode
+
+  attribute \src "cpu.v:25"
+  wire width 16 \src2_val
+
+  attribute \src "cpu.v:24"
+  wire width 16 \src1_val
+
+  attribute \src "cpu.v:23"
+  wire width 16 \tgt_val
+
+  attribute \src "cpu.v:21"
+  wire width 3 \src2
+
+  attribute \src "cpu.v:20"
+  wire width 3 \src1
+
+  attribute \src "cpu.v:20"
+  wire width 3 \tgt
+
+  attribute \src "cpu.v:18"
+  wire \_halt
+
+  attribute \src "cpu.v:16"
+  wire \we_rf
+
+  attribute \src "cpu.v:15"
+  wire width 2 \mux_tgt
+
+  attribute \src "cpu.v:15"
+  wire width 2 \mux_pc
+
+  attribute \src "cpu.v:14"
+  wire \mux_rf
+
+  attribute \src "cpu.v:14"
+  wire \mux_alu2
+
+  attribute \src "cpu.v:14"
+  wire \mux_alu1
+
+  attribute \src "cpu.v:13"
+  wire width 2 \func_alu
+
+  attribute \src "cpu.v:10"
+  wire output 9 \halt
+
+  attribute \src "cpu.v:9"
+  wire width 16 input 8 \data_out
+
+  attribute \src "cpu.v:8"
+  wire width 16 output 7 \data_in
+
+  attribute \src "cpu.v:7"
+  wire width 16 output 6 \data_addr
+
+  attribute \src "cpu.v:6"
+  wire output 5 \we_dmem
+
+  attribute \src "cpu.v:5"
+  wire width 16 output 4 \instr_addr
+
+  attribute \src "cpu.v:4"
+  wire width 16 input 3 \instr
+
+  attribute \src "cpu.v:3"
+  wire input 2 \reset
+
+  attribute \src "cpu.v:2"
+  wire input 1 \clk
+
+  attribute \src "cpu.v:140"
+  cell $eq $eq$cpu.v:140$23
+    parameter \Y_WIDTH 1
+    parameter \B_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $eq$cpu.v:140$23_Y
+    connect \B 16'1100000001111111
+    connect \A \instr
+  end
+
+  attribute \src "cpu.v:124"
+  cell $not $not$cpu.v:124$21
+    parameter \Y_WIDTH 1
+    parameter \A_WIDTH 1
+    parameter \A_SIGNED 0
+    connect \Y $not$cpu.v:124$21_Y
+    connect \A \reset
+  end
+
+  attribute \src "cpu.v:122"
+  cell $add $add$cpu.v:122$19
+    parameter \Y_WIDTH 16
+    parameter \B_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $add$cpu.v:122$19_Y
+    connect \B \sign_ext_s_imm
+    connect \A \pc_inc
+  end
+
+  attribute \src "cpu.v:121"
+  cell $add $add$cpu.v:121$18
+    parameter \Y_WIDTH 16
+    parameter \B_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $add$cpu.v:121$18_Y
+    connect \B 16'0000000000000001
+    connect \A \pc
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "cpu.v:77"
+  cell \alu \alu
+    connect \eq \eq
+    connect \out \alu_out
+    connect \in2 \alu_in2
+    connect \in1 \alu_in1
+    connect \func_alu \func_alu
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "cpu.v:66"
+  cell \registers \registers
+    connect \src2_val \src2_val
+    connect \src1_val \src1_val
+    connect \tgt_val \tgt_val
+    connect \src2 \src2
+    connect \src1 \src1
+    connect \tgt \tgt
+    connect \we_rf \we_rf
+    connect \clk \clk
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "cpu.v:56"
+  cell \op_decode \op_decode
+    connect \imm \imm
+    connect \s_imm \s_imm
+    connect \reg_c \reg_c
+    connect \reg_b \reg_b
+    connect \reg_a \reg_a
+    connect \opcode \opcode
+    connect \instr \instr
+  end
+
+  attribute \module_not_derived 1
+  attribute \src "cpu.v:43"
+  cell \control \control
+    connect \we_dmem \we_dmem
+    connect \we_rf \we_rf
+    connect \mux_tgt \mux_tgt
+    connect \mux_rf \mux_rf
+    connect \mux_pc \mux_pc
+    connect \mux_alu2 \mux_alu2
+    connect \mux_alu1 \mux_alu1
+    connect \func_alu \func_alu
+    connect \eq \eq
+    connect \opcode \opcode
+  end
+
+  attribute \src "cpu.v:38"
+  process $proc$cpu.v:38$24
+    assign { } { }
+    assign $3\pc[15:0] 16'0000000000000000
+    sync always
+    sync init
+      update \pc $3\pc[15:0]
+  end
+
+  attribute \src "cpu.v:139"
+  process $proc$cpu.v:139$22
+    assign { } { }
+    assign $0\_halt[0:0] $eq$cpu.v:140$23_Y
+    sync always
+      update \_halt $0\_halt[0:0]
+  end
+
+  attribute \src "cpu.v:123"
+  process $proc$cpu.v:123$20
+    assign { } { }
+    assign $0\pc[15:0] $1\pc[15:0]
+    attribute \src "cpu.v:124"
+    switch $not$cpu.v:124$21_Y
+      attribute \src "cpu.v:124"
+      case 1'1
+        assign { } { }
+        assign $1\pc[15:0] $2\pc[15:0]
+        attribute \src "cpu.v:125"
+        switch \mux_pc
+          attribute \src "cpu.v:126"
+          case 2'00
+            assign { } { }
+            assign $2\pc[15:0] \alu_out
+          attribute \src "cpu.v:127"
+          case 2'01
+            assign { } { }
+            assign $2\pc[15:0] \pc_inc
+          attribute \src "cpu.v:128"
+          case 2'10
+            assign { } { }
+            assign $2\pc[15:0] \pc_inc_offset
+          attribute \src "cpu.v:129"
+          case 
+            assign $2\pc[15:0] \pc
+        end
+      attribute \src "cpu.v:132"
+      case 
+        assign { } { }
+        assign $1\pc[15:0] 16'1111111111111111
+    end
+    sync posedge \clk
+      update \pc $0\pc[15:0]
+  end
+
+  attribute \src "cpu.v:114"
+  process $proc$cpu.v:114$17
+    assign { } { }
+    assign $0\alu_in2[15:0] $1\alu_in2[15:0]
+    attribute \src "cpu.v:115"
+    switch \mux_alu2
+      attribute \src "cpu.v:116"
+      case 1'0
+        assign { } { }
+        assign $1\alu_in2[15:0] \src2_val
+      attribute \src "cpu.v:117"
+      case 1'1
+        assign { } { }
+        assign $1\alu_in2[15:0] \sign_ext_s_imm
+      case 
+        assign $1\alu_in2[15:0] \alu_in2
+    end
+    sync always
+      update \alu_in2 $0\alu_in2[15:0]
+  end
+
+  attribute \src "cpu.v:108"
+  process $proc$cpu.v:108$16
+    assign { } { }
+    assign $0\alu_in1[15:0] $1\alu_in1[15:0]
+    attribute \src "cpu.v:109"
+    switch \mux_alu1
+      attribute \src "cpu.v:110"
+      case 1'0
+        assign { } { }
+        assign $1\alu_in1[15:0] \src1_val
+      attribute \src "cpu.v:111"
+      case 1'1
+        assign { } { }
+        assign $1\alu_in1[15:0] \shifted_imm
+      case 
+        assign $1\alu_in1[15:0] \alu_in1
+    end
+    sync always
+      update \alu_in1 $0\alu_in1[15:0]
+  end
+
+  attribute \src "cpu.v:96"
+  process $proc$cpu.v:96$15
+    assign { } { }
+    assign $0\src2[2:0] $1\src2[2:0]
+    attribute \src "cpu.v:97"
+    switch \mux_rf
+      attribute \src "cpu.v:98"
+      case 1'0
+        assign { } { }
+        assign $1\src2[2:0] \reg_a
+      attribute \src "cpu.v:99"
+      case 1'1
+        assign { } { }
+        assign $1\src2[2:0] \reg_c
+      case 
+        assign $1\src2[2:0] \src2
+    end
+    sync always
+      update \src2 $0\src2[2:0]
+  end
+
+  attribute \src "cpu.v:85"
+  process $proc$cpu.v:85$14
+    assign { } { }
+    assign $0\tgt_val[15:0] $1\tgt_val[15:0]
+    attribute \src "cpu.v:86"
+    switch \mux_tgt
+      attribute \src "cpu.v:87"
+      case 2'00
+        assign { } { }
+        assign $1\tgt_val[15:0] \alu_out
+      attribute \src "cpu.v:88"
+      case 2'01
+        assign { } { }
+        assign $1\tgt_val[15:0] \data_out
+      attribute \src "cpu.v:89"
+      case 2'10
+        assign { } { }
+        assign $1\tgt_val[15:0] \pc_inc
+      attribute \src "cpu.v:90"
+      case 
+        assign $1\tgt_val[15:0] \tgt_val
+    end
+    sync always
+      update \tgt_val $0\tgt_val[15:0]
+  end
+
+  connect \tgt \reg_a
+  connect \src1 \reg_b
+  connect \sign_ext_s_imm [6:0] \s_imm
+  connect \sign_ext_s_imm [15:7] { \s_imm [6] \s_imm [6] \s_imm [6] \s_imm [6] \s_imm [6] \s_imm [6] \s_imm [6] \s_imm [6] \s_imm [6] }
+  connect \shifted_imm [15:6] \imm
+  connect \shifted_imm [5:0] 6'000000
+  connect \pc_inc $add$cpu.v:121$18_Y
+  connect \pc_inc_offset $add$cpu.v:122$19_Y
+  connect \data_in \src2_val
+  connect \data_addr \alu_out
+  connect \halt \_halt
+  connect \instr_addr \pc
+end
+
+attribute \cells_not_processed 1
+attribute \src "control.v:1"
+module \control
+
+  attribute \src "control.v:110"
+  wire $1\_we_dmem[0:0]
+
+  attribute \src "control.v:110"
+  wire $0\_we_dmem[0:0]
+
+  attribute \src "control.v:97"
+  wire $1\_we_rf[0:0]
+
+  attribute \src "control.v:97"
+  wire $0\_we_rf[0:0]
+
+  attribute \src "control.v:84"
+  wire width 2 $1\_mux_tgt[1:0]
+
+  attribute \src "control.v:84"
+  wire width 2 $0\_mux_tgt[1:0]
+
+  attribute \src "control.v:71"
+  wire $1\_mux_rf[0:0]
+
+  attribute \src "control.v:71"
+  wire $0\_mux_rf[0:0]
+
+  attribute \src "control.v:54"
+  wire width 2 $2\_mux_pc[1:0]
+
+  attribute \src "control.v:54"
+  wire width 2 $1\_mux_pc[1:0]
+
+  attribute \src "control.v:54"
+  wire width 2 $0\_mux_pc[1:0]
+
+  attribute \src "control.v:41"
+  wire $1\_mux_alu2[0:0]
+
+  attribute \src "control.v:41"
+  wire $0\_mux_alu2[0:0]
+
+  attribute \src "control.v:28"
+  wire $1\_mux_alu1[0:0]
+
+  attribute \src "control.v:28"
+  wire $0\_mux_alu1[0:0]
+
+  attribute \src "control.v:15"
+  wire width 2 $1\_func_alu[1:0]
+
+  attribute \src "control.v:15"
+  wire width 2 $0\_func_alu[1:0]
+
+  attribute \src "control.v:13"
+  wire \_we_dmem
+
+  attribute \src "control.v:13"
+  wire \_we_rf
+
+  attribute \src "control.v:12"
+  wire width 2 \_mux_tgt
+
+  attribute \src "control.v:12"
+  wire width 2 \_mux_pc
+
+  attribute \src "control.v:11"
+  wire \_mux_rf
+
+  attribute \src "control.v:11"
+  wire \_mux_alu2
+
+  attribute \src "control.v:11"
+  wire \_mux_alu1
+
+  attribute \src "control.v:10"
+  wire width 2 \_func_alu
+
+  attribute \src "control.v:7"
+  wire output 10 \we_dmem
+
+  attribute \src "control.v:7"
+  wire output 9 \we_rf
+
+  attribute \src "control.v:6"
+  wire width 2 output 8 \mux_tgt
+
+  attribute \src "control.v:6"
+  wire width 2 output 7 \mux_pc
+
+  attribute \src "control.v:5"
+  wire output 6 \mux_rf
+
+  attribute \src "control.v:5"
+  wire output 5 \mux_alu2
+
+  attribute \src "control.v:5"
+  wire output 4 \mux_alu1
+
+  attribute \src "control.v:4"
+  wire width 2 output 3 \func_alu
+
+  attribute \src "control.v:3"
+  wire input 2 \eq
+
+  attribute \src "control.v:2"
+  wire width 3 input 1 \opcode
+
+  attribute \src "control.v:110"
+  process $proc$control.v:110$13
+    assign { } { }
+    assign $0\_we_dmem[0:0] $1\_we_dmem[0:0]
+    attribute \src "control.v:111"
+    switch \opcode
+      attribute \src "control.v:112"
+      case 3'000
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      attribute \src "control.v:113"
+      case 3'001
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      attribute \src "control.v:114"
+      case 3'010
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      attribute \src "control.v:115"
+      case 3'011
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      attribute \src "control.v:116"
+      case 3'100
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'1
+      attribute \src "control.v:117"
+      case 3'101
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      attribute \src "control.v:118"
+      case 3'110
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      attribute \src "control.v:119"
+      case 3'111
+        assign { } { }
+        assign $1\_we_dmem[0:0] 1'0
+      case 
+        assign $1\_we_dmem[0:0] \_we_dmem
+    end
+    sync always
+      update \_we_dmem $0\_we_dmem[0:0]
+  end
+
+  attribute \src "control.v:97"
+  process $proc$control.v:97$12
+    assign { } { }
+    assign $0\_we_rf[0:0] $1\_we_rf[0:0]
+    attribute \src "control.v:98"
+    switch \opcode
+      attribute \src "control.v:99"
+      case 3'000
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'1
+      attribute \src "control.v:100"
+      case 3'001
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'1
+      attribute \src "control.v:101"
+      case 3'010
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'1
+      attribute \src "control.v:102"
+      case 3'011
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'1
+      attribute \src "control.v:103"
+      case 3'100
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'0
+      attribute \src "control.v:104"
+      case 3'101
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'1
+      attribute \src "control.v:105"
+      case 3'110
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'0
+      attribute \src "control.v:106"
+      case 3'111
+        assign { } { }
+        assign $1\_we_rf[0:0] 1'1
+      case 
+        assign $1\_we_rf[0:0] \_we_rf
+    end
+    sync always
+      update \_we_rf $0\_we_rf[0:0]
+  end
+
+  attribute \src "control.v:84"
+  process $proc$control.v:84$11
+    assign { } { }
+    assign $0\_mux_tgt[1:0] $1\_mux_tgt[1:0]
+    attribute \src "control.v:85"
+    switch \opcode
+      attribute \src "control.v:86"
+      case 3'000
+        assign { } { }
+        assign $1\_mux_tgt[1:0] 2'00
+      attribute \src "control.v:87"
+      case 3'001
+        assign { } { }
+        assign $1\_mux_tgt[1:0] 2'00
+      attribute \src "control.v:88"
+      case 3'010
+        assign { } { }
+        assign $1\_mux_tgt[1:0] 2'00
+      attribute \src "control.v:89"
+      case 3'011
+        assign { } { }
+        assign $1\_mux_tgt[1:0] 2'00
+      attribute \src "control.v:90"
+      case 3'100
+        assign $1\_mux_tgt[1:0] \_mux_tgt
+      attribute \src "control.v:91"
+      case 3'101
+        assign { } { }
+        assign $1\_mux_tgt[1:0] 2'01
+      attribute \src "control.v:92"
+      case 3'110
+        assign $1\_mux_tgt[1:0] \_mux_tgt
+      attribute \src "control.v:93"
+      case 3'111
+        assign { } { }
+        assign $1\_mux_tgt[1:0] 2'10
+      case 
+        assign $1\_mux_tgt[1:0] \_mux_tgt
+    end
+    sync always
+      update \_mux_tgt $0\_mux_tgt[1:0]
+  end
+
+  attribute \src "control.v:71"
+  process $proc$control.v:71$10
+    assign { } { }
+    assign $0\_mux_rf[0:0] $1\_mux_rf[0:0]
+    attribute \src "control.v:72"
+    switch \opcode
+      attribute \src "control.v:73"
+      case 3'000
+        assign { } { }
+        assign $1\_mux_rf[0:0] 1'1
+      attribute \src "control.v:74"
+      case 3'001
+        assign $1\_mux_rf[0:0] \_mux_rf
+      attribute \src "control.v:75"
+      case 3'010
+        assign { } { }
+        assign $1\_mux_rf[0:0] 1'1
+      attribute \src "control.v:76"
+      case 3'011
+        assign $1\_mux_rf[0:0] \_mux_rf
+      attribute \src "control.v:77"
+      case 3'100
+        assign { } { }
+        assign $1\_mux_rf[0:0] 1'0
+      attribute \src "control.v:78"
+      case 3'101
+        assign $1\_mux_rf[0:0] \_mux_rf
+      attribute \src "control.v:79"
+      case 3'110
+        assign { } { }
+        assign $1\_mux_rf[0:0] 1'0
+      attribute \src "control.v:80"
+      case 3'111
+        assign $1\_mux_rf[0:0] \_mux_rf
+      case 
+        assign $1\_mux_rf[0:0] \_mux_rf
+    end
+    sync always
+      update \_mux_rf $0\_mux_rf[0:0]
+  end
+
+  attribute \src "control.v:54"
+  process $proc$control.v:54$9
+    assign { } { }
+    assign $0\_mux_pc[1:0] $1\_mux_pc[1:0]
+    attribute \src "control.v:55"
+    switch \opcode
+      attribute \src "control.v:56"
+      case 3'000
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'01
+      attribute \src "control.v:57"
+      case 3'001
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'01
+      attribute \src "control.v:58"
+      case 3'010
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'01
+      attribute \src "control.v:59"
+      case 3'011
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'01
+      attribute \src "control.v:60"
+      case 3'100
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'01
+      attribute \src "control.v:61"
+      case 3'101
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'01
+      attribute \src "control.v:62"
+      case 3'110
+        assign { } { }
+        assign $1\_mux_pc[1:0] $2\_mux_pc[1:0]
+        attribute \src "control.v:62"
+        switch \eq
+          attribute \src "control.v:62"
+          case 1'1
+            assign { } { }
+            assign $2\_mux_pc[1:0] 2'10
+          attribute \src "control.v:64"
+          case 
+            assign { } { }
+            assign $2\_mux_pc[1:0] 2'01
+        end
+      attribute \src "control.v:67"
+      case 3'111
+        assign { } { }
+        assign $1\_mux_pc[1:0] 2'00
+      case 
+        assign $1\_mux_pc[1:0] \_mux_pc
+    end
+    sync always
+      update \_mux_pc $0\_mux_pc[1:0]
+  end
+
+  attribute \src "control.v:41"
+  process $proc$control.v:41$8
+    assign { } { }
+    assign $0\_mux_alu2[0:0] $1\_mux_alu2[0:0]
+    attribute \src "control.v:42"
+    switch \opcode
+      attribute \src "control.v:43"
+      case 3'000
+        assign { } { }
+        assign $1\_mux_alu2[0:0] 1'0
+      attribute \src "control.v:44"
+      case 3'001
+        assign { } { }
+        assign $1\_mux_alu2[0:0] 1'1
+      attribute \src "control.v:45"
+      case 3'010
+        assign { } { }
+        assign $1\_mux_alu2[0:0] 1'0
+      attribute \src "control.v:46"
+      case 3'011
+        assign $1\_mux_alu2[0:0] \_mux_alu2
+      attribute \src "control.v:47"
+      case 3'100
+        assign { } { }
+        assign $1\_mux_alu2[0:0] 1'1
+      attribute \src "control.v:48"
+      case 3'101
+        assign { } { }
+        assign $1\_mux_alu2[0:0] 1'1
+      attribute \src "control.v:49"
+      case 3'110
+        assign { } { }
+        assign $1\_mux_alu2[0:0] 1'0
+      attribute \src "control.v:50"
+      case 3'111
+        assign $1\_mux_alu2[0:0] \_mux_alu2
+      case 
+        assign $1\_mux_alu2[0:0] \_mux_alu2
+    end
+    sync always
+      update \_mux_alu2 $0\_mux_alu2[0:0]
+  end
+
+  attribute \src "control.v:28"
+  process $proc$control.v:28$7
+    assign { } { }
+    assign $0\_mux_alu1[0:0] $1\_mux_alu1[0:0]
+    attribute \src "control.v:29"
+    switch \opcode
+      attribute \src "control.v:30"
+      case 3'000
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      attribute \src "control.v:31"
+      case 3'001
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      attribute \src "control.v:32"
+      case 3'010
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      attribute \src "control.v:33"
+      case 3'011
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'1
+      attribute \src "control.v:34"
+      case 3'100
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      attribute \src "control.v:35"
+      case 3'101
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      attribute \src "control.v:36"
+      case 3'110
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      attribute \src "control.v:37"
+      case 3'111
+        assign { } { }
+        assign $1\_mux_alu1[0:0] 1'0
+      case 
+        assign $1\_mux_alu1[0:0] \_mux_alu1
+    end
+    sync always
+      update \_mux_alu1 $0\_mux_alu1[0:0]
+  end
+
+  attribute \src "control.v:15"
+  process $proc$control.v:15$6
+    assign { } { }
+    assign $0\_func_alu[1:0] $1\_func_alu[1:0]
+    attribute \src "control.v:16"
+    switch \opcode
+      attribute \src "control.v:17"
+      case 3'000
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'00
+      attribute \src "control.v:18"
+      case 3'001
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'00
+      attribute \src "control.v:19"
+      case 3'010
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'01
+      attribute \src "control.v:20"
+      case 3'011
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'10
+      attribute \src "control.v:21"
+      case 3'100
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'00
+      attribute \src "control.v:22"
+      case 3'101
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'00
+      attribute \src "control.v:23"
+      case 3'110
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'11
+      attribute \src "control.v:24"
+      case 3'111
+        assign { } { }
+        assign $1\_func_alu[1:0] 2'00
+      case 
+        assign $1\_func_alu[1:0] \_func_alu
+    end
+    sync always
+      update \_func_alu $0\_func_alu[1:0]
+  end
+
+  connect \func_alu \_func_alu
+  connect \mux_alu1 \_mux_alu1
+  connect \mux_alu2 \_mux_alu2
+  connect \mux_rf \_mux_rf
+  connect \mux_pc \_mux_pc
+  connect \mux_tgt \_mux_tgt
+  connect \we_rf \_we_rf
+  connect \we_dmem \_we_dmem
+end
+
+attribute \cells_not_processed 1
+attribute \src "alu.v:1"
+module \alu
+
+  attribute \src "alu.v:27"
+  wire width 16 $not$alu.v:27$5_Y
+
+  attribute \src "alu.v:27"
+  wire width 16 $and$alu.v:27$4_Y
+
+  attribute \src "alu.v:26"
+  wire width 16 $add$alu.v:26$3_Y
+
+  attribute \src "alu.v:21"
+  wire $eq$alu.v:21$2_Y
+
+  attribute \src "alu.v:14"
+  wire $1\_eq[0:0]
+
+  attribute \src "alu.v:14"
+  wire width 16 $1\_out[15:0]
+
+  attribute \src "alu.v:14"
+  wire $0\_eq[0:0]
+
+  attribute \src "alu.v:14"
+  wire width 16 $0\_out[15:0]
+
+  attribute \src "alu.v:12"
+  wire \_eq
+
+  attribute \src "alu.v:11"
+  wire width 16 \_out
+
+  attribute \src "alu.v:10"
+  wire width 16 \nanded
+
+  attribute \src "alu.v:9"
+  wire width 16 \added
+
+  attribute \src "alu.v:6"
+  wire output 5 \eq
+
+  attribute \src "alu.v:5"
+  wire width 16 output 4 \out
+
+  attribute \src "alu.v:4"
+  wire width 16 input 3 \in2
+
+  attribute \src "alu.v:3"
+  wire width 16 input 2 \in1
+
+  attribute \src "alu.v:2"
+  wire width 2 input 1 \func_alu
+
+  attribute \src "alu.v:27"
+  cell $not $not$alu.v:27$5
+    parameter \Y_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \A_SIGNED 0
+    connect \Y $not$alu.v:27$5_Y
+    connect \A $and$alu.v:27$4_Y
+  end
+
+  attribute \src "alu.v:27"
+  cell $and $and$alu.v:27$4
+    parameter \Y_WIDTH 16
+    parameter \B_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $and$alu.v:27$4_Y
+    connect \B \in2
+    connect \A \in1
+  end
+
+  attribute \src "alu.v:26"
+  cell $add $add$alu.v:26$3
+    parameter \Y_WIDTH 16
+    parameter \B_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $add$alu.v:26$3_Y
+    connect \B \in2
+    connect \A \in1
+  end
+
+  attribute \src "alu.v:21"
+  cell $eq $eq$alu.v:21$2
+    parameter \Y_WIDTH 1
+    parameter \B_WIDTH 16
+    parameter \A_WIDTH 16
+    parameter \B_SIGNED 0
+    parameter \A_SIGNED 0
+    connect \Y $eq$alu.v:21$2_Y
+    connect \B \in2
+    connect \A \in1
+  end
+
+  attribute \src "alu.v:14"
+  process $proc$alu.v:14$1
+    assign { } { }
+    assign { } { }
+    assign $0\_out[15:0] $1\_out[15:0]
+    assign $0\_eq[0:0] $1\_eq[0:0]
+    attribute \src "alu.v:15"
+    switch \func_alu
+      attribute \src "alu.v:16"
+      case 2'00
+        assign { } { }
+        assign $1\_eq[0:0] \_eq
+        assign $1\_out[15:0] \added
+      attribute \src "alu.v:17"
+      case 2'01
+        assign { } { }
+        assign $1\_eq[0:0] \_eq
+        assign $1\_out[15:0] \nanded
+      attribute \src "alu.v:18"
+      case 2'10
+        assign { } { }
+        assign $1\_eq[0:0] \_eq
+        assign $1\_out[15:0] \in1
+      attribute \src "alu.v:19"
+      case 2'11
+        assign { } { }
+        assign { } { }
+        assign $1\_out[15:0] \in1
+        assign $1\_eq[0:0] $eq$alu.v:21$2_Y
+      case 
+        assign $1\_out[15:0] \_out
+        assign $1\_eq[0:0] \_eq
+    end
+    sync always
+      update \_out $0\_out[15:0]
+      update \_eq $0\_eq[0:0]
+  end
+
+  connect \added $add$alu.v:26$3_Y
+  connect \nanded $not$alu.v:27$5_Y
+  connect \out \_out
+  connect \eq \_eq
+end
+
+End of script. Logfile hash: e782623eb8
+Yosys 0.9+932 (git sha1 UNKNOWN, x86_64-w64-mingw32-g++ 7.3-posix -O3 -DNDEBUG)
+Time spent: 50% 6x read_verilog (0 sec), 50% 1x dump (0 sec)
